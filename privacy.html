@@ -38,13 +38,20 @@
 <h3>Data stored on your device</h3>
 <p>LifeBalance stores the following on your device only:</p>
 <ul>
-<li><b>Profile:</b> weight, height, age, gender and activity level, used to calculate your water goal.</li>
+<li><b>Profile and family members:</b> weight, height, age, gender and activity level for you and for each family member you add, and the member names you enter, used to calculate water goals.</li>
 <li><b>Water log:</b> the amount, drink type and time of each drink you log, and the goal for each day.</li>
+<li><b>Movement:</b> the workouts you log (type, minutes, intensity, time) and the step and exercise totals shown for today.</li>
+<li><b>Sleep:</b> the nights you log, or read from Health Connect if you allow it (bedtime, wake time, quality).</li>
+<li><b>Mood check-ins:</b> mood, energy, tags and the optional note you type.</li>
+<li><b>Breathing, habits and nutrition:</b> breathing minutes, your habits and their daily check-offs, fruit and vegetable servings, meals and weight entries.</li>
+<li><b>Challenges and Balance history:</b> the family challenges you create and the Balance score recorded for each day.</li>
 <li><b>Settings:</b> your preferences, such as reminders, quick-add amounts, units and language.</li>
 <li><b>Chosen place:</b> the city you picked, or the approximate area found with "Use my location", with its coordinates rounded to about 11 km.</li>
 <li><b>Cached forecast:</b> the most recent weather forecast, so the App can work offline.</li>
 </ul>
 <p>We do not receive any of this. It is never sent to us.</p>
+<p><b>Mood notes are sensitive and local-only.</b> The notes you type in a mood check-in stay on your device. The App never sends them anywhere. They are included only in a backup file or Google Drive backup that you choose to create yourself.</p>
+<p><b>Wear OS watch (optional).</b> If you install the LifeBalance watch app, the phone sends today's water intake, goal, Balance score, heat level, bottle size and your last few entries to your paired watch through Google Play services (device to device). Logs you make on the watch go back to the phone the same way. None of this goes to us or to any other server.</p>
 
 <h3>What leaves your device</h3>
 <p>To work out today's heat level, the App sends a request to <b>MET Norway</b> (<a href="https://api.met.no/">api.met.no</a>, the Norwegian Meteorological Institute), a third-party weather service. The request contains:</p>
@@ -83,10 +90,11 @@
 <h2>Optional backup to your own Google Drive</h2>
 <p>The App can back up to <b>your own Google Drive</b>, but only if you choose to. It is off until you tap "Connect Google Drive" in <i>Settings</i>.</p>
 <ul>
-<li><b>What is stored:</b> the same backup file the App can save to your phone (profile, water log, areas, family members and settings). Nothing else.</li>
+<li><b>What is stored:</b> the same backup file the App can save to your phone: profile, water log, movement, sleep, mood check-ins (including notes), breathing, habits, nutrition, family members, challenges, Balance history and settings. Nothing else.</li>
 <li><b>Where:</b> a hidden app folder (<code>appDataFolder</code>) in <b>your</b> Google Drive. Only LifeBalance can open it, and it does not appear in your Drive files. It is covered by your Google account's own terms and privacy policy.</li>
 <li><b>How it works:</b> the backup goes straight from your phone to Google. <b>It never passes through any server of ours and we never receive it.</b> The App asks Google for the single permission "See, create, and delete its own configuration data in your Google Drive" (<code>drive.appdata</code>) and gets no access to your other Drive files or your contacts.</li>
-<li><b>Weekly backup:</b> an optional setting. It runs on an unmetered (Wi-Fi) network and only if Google allows it without asking you again.</li>
+<li><b>Weekly backup:</b> an optional setting. It runs on an unmetered (Wi-Fi) network and only if Google allows it without asking you again. It does nothing if this phone has no data yet, or if a backup from another phone or an earlier install is already on Drive and you have not chosen to replace it.</li>
+<li><b>Two copies:</b> the App keeps at most two files in the hidden folder: the latest backup and the one before it (<code>lifebalance-backup.prev.json</code>). If a backup already exists when you back up for the first time from a phone, the App asks whether to restore it or replace it. "Delete my Drive backup" removes both files.</li>
 <li><b>Your control:</b> you can restore from Drive, delete the Drive backup from inside the App, or disconnect Google Drive at any time. You can also remove the App's access in your Google Account settings, which deletes its hidden folder.</li>
 </ul>
 <p>Apart from this optional feature, the App opts out of Android's automatic backup, so your data is not copied to the cloud unless you connect Google Drive.</p>
@@ -99,11 +107,11 @@
 <h3>How to delete all of your data</h3>
 <p>Any of the following permanently erases your LifeBalance data from your device:</p>
 <ul>
-<li><b>Delete all data in the App.</b> Open <i>Settings → Delete all data</i>. This erases your profile, water log, settings, chosen place and cached forecast immediately, cancels reminders, and returns the App to the first-time setup.</li>
+<li><b>Delete all data in the App.</b> Open <i>Settings → Delete all data</i>. This erases everything listed above (profile and family members, water, movement, sleep, mood, breathing, habits, challenges, Balance history, settings, chosen place and cached forecast) and shared card images immediately, cancels reminders, disconnects Google Drive (revokes access, stops the weekly backup and forgets your account name), and returns the App to the first-time setup. If Google Drive is connected you can tick "Also delete my Google Drive backup" to delete the Drive files as well. The flags that record a tip or purchase are kept, so a purchase is not lost; they hold no personal data.</li>
 <li><b>Uninstall the app.</b> Removing LifeBalance deletes its local storage.</li>
 <li><b>Clear the app's data without uninstalling.</b> On Android, open <i>Settings → Apps → LifeBalance → Storage → Clear data</i> (the exact wording varies by device).</li>
 </ul>
-<p>Water records the App wrote to Health Connect stay in Health Connect. You can delete them in the Health Connect app. If you used the optional Google Drive backup, delete it first with <i>Settings → Delete my Drive backup</i> (or remove the App's access in your Google Account); that file is in your own Drive, not with us.</p>
+<p>Water records the App wrote to Health Connect stay in Health Connect. You can delete them in the Health Connect app. If you used the optional Google Drive backup, tick "Also delete my Google Drive backup" in the delete dialog, or delete it first with <i>Settings → Delete my Drive backup</i> (or remove the App's access in your Google Account); those files (the latest backup and the previous copy) are in your own Drive, not with us.</p>
 <p>Once deleted, this data cannot be recovered by you or by us. We hold no backups, copies or archives of it. A Google Drive backup you made is yours and is deleted as described above.</p>
 <p>If you have any question about deleting your data, email us at <b>prasantht246@gmail.com</b> and we will respond. See also the <a href="delete-data.html">data deletion page</a>.</p>
 
