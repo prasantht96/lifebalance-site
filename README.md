@@ -6,7 +6,7 @@ Live URL: https://prasantht96.github.io/lifebalance-site/
 
 ## Pages
 
-index.html, privacy.html, terms.html, support.html, delete-data.html, 404.html, plus robots.txt, sitemap.xml and .nojekyll. Open-Meteo attribution (CC BY 4.0) is in the footer of every page. There is no refunds page (free app).
+index.html, privacy.html, terms.html, support.html, delete-data.html, 404.html, plus robots.txt, sitemap.xml and .nojekyll. MET Norway, CPCB and GeoNames attribution is in the footer of every page. There is no refunds page (free app).
 
 ## Publish (GitHub Pages)
 
